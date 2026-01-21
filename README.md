@@ -70,7 +70,6 @@ Les données traitées ressemblent à :
     "status": "cleaned"
 }
 ```
-
 ##  Technologies Utilisées
 *   **Langage** : Python (Numpy, Paho-MQTT)
 *   **Messaging** : MQTT (Mosquitto)
