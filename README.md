@@ -1,10 +1,10 @@
 # wind_turbine_data_pipeline
 A real-time IoT data pipeline for wind turbines using MQTT, Redis, and MongoDB.
-# 🌬️ Pipeline de Données Éoliennes en Temps Réel
+#  Pipeline de Données Éoliennes en Temps Réel
 
 Ce projet implémente un pipeline de données IoT complet pour surveiller et analyser les performances des éoliennes en temps réel. Il simule la génération de données, assure le nettoyage, le transit via un bus de messages, et le stockage final dans une base de données NoSQL.
 
-## 🏗️ Architecture du Système
+##  Architecture du Système
 
 Le pipeline suit le flux suivant :
 1.  Génération : Simulations Python publiant des données de télémétrie (Vitesse du vent, Puissance, Énergie).
@@ -15,14 +15,14 @@ Le pipeline suit le flux suivant :
 
 
 
-## 📂 Structure du Projet
+##  Structure du Projet
 
 *   `Turibne_101_Data_Generator.py` : Simule les capteurs de l'éolienne 101.
 *   `mqtt_cleaner.py` : Nettoie les données brutes (remplacement des `null` par les moyennes).
 *   `mqtt_to_redis.py` : Transfère les flux propres vers Redis.
 *   `redis_to_mongo.py` : Consomme Redis pour enregistrer les documents dans MongoDB.
 
-## 🚀 Installation et Démarrage
+##  Installation et Démarrage
 
 ### 1. Prérequis
 Assurez-vous d'avoir installé :
@@ -58,7 +58,7 @@ Ouvrez plusieurs terminaux et lancez les scripts dans cet ordre :
     # ... répéter pour 102 et 103
     ```
 
-## 📊 Format des Données (JSON)
+## Format des Données (JSON)
 Les données traitées ressemblent à :
 ```json
 {
@@ -71,7 +71,7 @@ Les données traitées ressemblent à :
 }
 ```
 
-## 🛠️ Technologies Utilisées
+##  Technologies Utilisées
 *   **Langage** : Python (Numpy, Paho-MQTT)
 *   **Messaging** : MQTT (Mosquitto)
 *   **Cache/Stream** : Redis
